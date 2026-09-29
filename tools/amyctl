@@ -1,0 +1,25 @@
+#!/bin/bash
+# Copyright (C) 2023-2026 Ola Gatner
+# SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-AmyCore-Commercial
+# Command-line client for a running AmyCore (GUI or --headless), see "command API" in main.cpp.
+#   amyctl                          print /tmp/amycore.status (overall state + every side, rewritten every 200 ms)
+#   amyctl <command ...>            send one command, e.g. "amyctl jog j5 1500 400", then print the status
+#   amyctl wait <regex> [seconds]   wait until the status file matches (grep -E), e.g. amyctl wait "config done" 60
+PIPE=/tmp/amycore.cmd
+STATUS=/tmp/amycore.status
+
+if [ $# -eq 0 ]; then cat $STATUS; exit; fi
+if [ "$1" = wait ]; then
+    end=$(( $(date +%s) + ${3:-30} ))
+    until grep -qE "$2" $STATUS 2>/dev/null; do
+        [ $(date +%s) -ge $end ] && { echo "timeout waiting for: $2"; cat $STATUS; exit 1; }
+        sleep 0.2
+    done
+    grep -E "$2" $STATUS; exit 0
+fi
+[ -p $PIPE ] || { echo "AmyCore not running ($PIPE missing)"; exit 1; }
+age=$(( $(date +%s) - $(stat -c %Y $STATUS 2>/dev/null || echo 0) ))
+[ $age -gt 2 ] && { echo "AmyCore not running (status file is ${age} s old)"; exit 1; }
+echo "$*" > $PIPE
+sleep 0.4
+cat $STATUS

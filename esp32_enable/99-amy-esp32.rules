@@ -1,0 +1,5 @@
+# AMY enable board (LOLIN S2 Mini) -> /dev/amy-esp32, whatever ttyACM number it gets.
+# Install: sudo cp esp32_enable/99-amy-esp32.rules /etc/udev/rules.d/ && sudo udevadm control --reload && sudo udevadm trigger
+SUBSYSTEM=="tty", ATTRS{idVendor}=="303a", ATTRS{idProduct}=="80c2", SYMLINK+="amy-esp32", MODE="0666"
+# USB device node write access, so AmyCore can reset the ESP32's USB port (USBDEVFS_RESET) when its CDC serial stalls
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="303a", ATTR{idProduct}=="80c2", MODE="0666"

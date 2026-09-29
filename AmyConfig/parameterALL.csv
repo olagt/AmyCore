@@ -1,0 +1,275 @@
+#                                      ,,,,   head_pan,    right_j0 , right_j1 ,right_j2 ,right_j3,right_j4, right_j5 ,right_j6
+#registers for mode : 5 group 1 module 1 
+JointErrorOverrideMask,5,2,0,      1288,         0,         0,         0,         0,         0,         0,         
+GlobalErrorOverrideMask,5,2,1,         0,      0,         0,        0,         0,       0,         0,        
+JointMeasurementSource,5,4,2,         1,         1,         1,        1,         1,         1,         1,        
+KOTEK3                        ,5,0,3,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,4,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,5,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,6,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,7,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,8,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,9,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,10,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,11,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,12,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,13,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,14,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,15,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,16,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,17,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,18,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,19,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,20,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,21,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,22,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,23,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,24,         ,         ,         ,         ,         ,         ,         ,        
+Sawyer_SnsConsChecker_FlexureStiffness_NmPerRad,5,4,25,         ,      2547,      2548,      2021,      2031,   505      ,       466,       538
+Sawyer_SnsConsChecker_KinConstThresh_mRad,5,4,26,         ,        20,        20,        20,        20,       20,        20,        20
+Sawyer_SnsConsChecker_MotorHallTicksPerOutputmRad_q28,5,4,27, -25631134,-644504403,-844300768 ,-485068436, 485068436,    -317768692,-317768692,-317768692
+Sawyer_TorqueConfig_CurrentBasedFlag,5,2,28,         1,         0,         0,         0,         0,        0 ,         0,         0
+Sawyer_TorqueConfig_TorqueConstant_NmPerAmp_Q10,5,4,29,     -1286,     13677,     17978,     12310,    -12310,     -6672,     -6672,     -5060
+                              ,5,0,30,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,31,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,32,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,33,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,34,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,35,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,36,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,37,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,38,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,39,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,40,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,41,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,42,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,43,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,44,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,45,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,46,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,47,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,48,         ,         ,         ,         ,         ,         ,         ,        
+                              ,5,0,49,         ,         ,         ,         ,         ,         ,         ,        
+#registers for mode : 17 group 1  module 4 
+                              ,17,0,0,         ,         ,         ,         ,         ,         ,         ,        
+JointTorqueController_GainP,17,4,1,         0,      -600,      -600,      -512,      -512,       512,       650,       512
+JointTorqueController_GainI,17,4,2,         0,         0,         0,         0,         0,         0,         0,         0
+JointTorqueController_GainD,17,4,3,         0,     -2048,     -2048,     -2048,     -3072,      2048,      2048,      2048
+JointTorqueController_GainN,17,4,4,   1024000,    409600,    409600,   1024000,    512000,    512000,   1024000,    512000
+JointTorqueController_InputLimit,17,4,5,      1500,  85000,     85000,     40000,  40000,   9000 ,      9000,      9000
+JointTorqueController_UpperOutputLimit,17,4,6,         0,       8000,      8000,      6000,      6000,     4000,      4000,      4000
+JointTorqueController_LowerOutputLimit,17,4,7,         0,  -8000 ,     -8000,     -6000,     -6000,   -4000     ,     -4000,     -4000
+JointTorqueController_GainD_Halls,17,4,8,         0,         0,        0 ,         0,         0,         0,         0,         0
+JointTorqueController_FF      ,17,4,9,      1024,       -70,    -50 ,      -150,      -150,       256,       256,       256
+JointTorqueController_ErrorDeadband_mNm,17,4,10,         0,         0,        0 ,         0,         0,         0,         0,         0
+JointTorqueController_FaultLimit_mNm,17,4,11,1024000000,     90000,   90000      ,     50000,     50000,     99999,     99999,     99999
+JointTorqueController_GainD_Prefilter,17,4,12,         0,         0,         0,         0,         0,         0,         0,         0
+PositionController_GainP      ,17,4,13,    100000,    768000,1024000,    384000,    384000,    102400,    102400,    128000
+JointPositionController_GainI,17,4,14,         ,         0,         0,         0,         0,      0   ,         0,         0
+JointPositionController_GainD ,17,4,15,         ,         0,      0 ,         0,         0,         0,         0,         0
+JointPositionController_GainN ,17,4,16,    321699 ,    321699,   321699 ,    321699,    321699,     321699,    321699,    643398
+JointPositionController_GainDHalls,17,4,17,      0   ,    10244 ,  13420,      7710,      7710,    842,       842,       842
+JointPositionController_LowerInputLimit,17,4,18,     -5097,     -3052,        -3811 ,     -3045,     -3046,     -2978,     -2978,     -4714
+JointPositionController_UpperInputLimit,17,4,19,       908,      3052,      2276 ,      3045,      3046,      2978,      2978,      4714
+JointPositionController_UpperOutputLimit,17,4,20,     17899,     85000,     85000 ,     40000,     40000,      9000,      9000,      9000
+JointPositionController_LowerOutputLimit,17,4,21,    -17899,    -85000,     -85000,    -40000,    -40000,     -9000,     -9000,     -9000
+JointPositionController_ErrorDeadBand,17,4,22,         0,         1,         1,         1,         1,         2,         2,         2
+JointPositionController_GainD_Prefilter,17,4,23,      1000,    12000 ,     16000 ,      4000,      4000,       400,       400,       400
+PositionController_Joint2RobotAssyDirection,17,2,24,       1,       1  ,     1    ,         1,        -1,         1,         1,         1
+PositionController_HomingSpeed_mRadPerSec,17,2,25,      500,        100 ,      100   ,  100       ,       100,       100,       100,       100
+JointPositionController_isHead,17,2,26,        1 ,       0  ,        0 ,        0,         0,         0,         0,         0
+PositionController_HeadDisable_CurrentLimit,17,2,27,    1000     ,         0,        0 ,         0,         0,         0,         0,         0
+MotorHallTicksPerOutputmRad_q28,17,4,28, -25631134,-644504403,-844300768,    -485068436,-485068436,-317768692,-317768692,-317768692
+PWMTorqueController_ErrorDeadband_mNm,17,4,29,      0   ,         0,         0,         0,         0,         0,       0  ,         0
+PWMTorqueController_FaultLimit_mNm,17,4,30,         ,     90000,     90000,     50000,     50000,     99999,99999,     99999
+PWMTorqueController_InputLimit_mNm,17,4,31,         ,     85000,     85000,     40000,     40000,      9000,      9000   ,      9000
+                              ,17,0,32,         ,         ,         ,         ,         ,         ,         ,        
+PWMTorqueController_LowerOutputLimit,17,4,33,         ,    -17899,    -17899,    -17899,    -17899,    -17899,    -17899,    -17899
+                             ,17,0,34,         ,         ,         ,         ,         ,         ,         ,        
+PWMTorqueController_UpperOutputLimit,17,4,35,     17899,       17899,     17899,     17899,     17899,     17899,     17899,     17899
+PWMTorqueController_BEMF_FF,17,4,36, -12304175,  9395241  ,   9395241,   8724153,  -8724153,  -7516191,  -7516191,  -5905582
+PWMTorqueController_GainD,17,4,37,         0,        0 ,         0,         0,         0,         0,         0,         0
+PWMTorqueController_GainI,17,4,38,         0,        0 ,         0,         0,       0 ,         0,         0,         0
+PWMTorqueController_GainN,17,4,39,         0,    643398,    643398,    321699,   321699 ,    643398,    643398,    965097
+PWMTorqueController_GainP,17,4,40,         0,      -512,      -512,      -358,       -358 ,     350   ,       350,       350
+PWMTorqueController_EnableCurrentLimiting,17,2,41,         1,         1,         1,         1,       1  ,         1,         1,         1
+PWMTorqueController_KFF,17,4,42,      1024   ,       -30,       -15,       -154  ,     -154 ,       205,       205,       205
+                              ,17,0,43,         ,         ,         ,         ,         ,         ,         ,        
+Sawyer_PWM_Torque_Control_Flag,17,2,44,       1  ,         1,         1,     1    ,         1,         1,         1,         1
+Sawyer_PWMTorqueController_TRComp_Mag_Selector,17,4,45,     6  ,         1,         2,       3  ,         4,         6,         6,         6
+Sawyer_PWMTorqueController_TRComp_Phase_Gain,17,4,46,      0   ,   3145728,   4194304 ,   2621440 ,   2621440,   2621440,   2621440,         0
+Sawyer_PWMTorqueController_MotorConstant,17,4,47, -39513699,  44560286, 44713831,  39967892, -39977556, -33065879, -33506114, -25079388
+PWMTorqueController_CurrentPredGain_q30,17,4,48, 422302659, 422302659,  422302659, 422302659,   422302659, 422302659, 422302659, 422302659
+                              ,17,0,49,         ,         ,         ,         ,         ,         ,         ,        
+PWMTorqueController_InnerGearRatio,17,4,50,         , 843654290,   843654290 , 846604130, 846604130, 770293048, 770293048, 770293048
+Sawyer_PWMTorqueController_MotorInductance,17,4,51, 107374182,  21474836,  21474836,  42949673,  42949673,  10737418,  10737418, 107374182
+Sawyer_PWMTorqueController_MotorPeakCurrent_Homed,17,4,52,      1200,     8000,      8000,      6000,      6000,      4000,      4000,      4000
+Sawyer_PWMTorqueController_MotorResistance,17,4,53, 603979776,  17213423,  17213423,  57042534,  57042534,  50264465,  50264465,  66391806
+Sawyer_PWMTorqueController_MotorPoles,17,2,54,         6,      16   ,        16,     12   ,        12,        12,        12,        12
+PWMTorqueController_BEMF_FF_ZeroG,17,4,55,  1024  , 10804527  ,  10804527,    9395240  ,  -9395240,  -7730941,  -7730941,  -5368709
+PWMTorqueController_GainD_ZeroG,17,4,56,      0   ,         0,        0 ,       0  ,         0,         5,         5,         0
+PWMTorqueController_GainI_ZeroG,17,4,57,     0    ,         0,         0,      0   ,         0,         0,         0,         0
+PWMTorqueController_GainN_ZeroG,17,4,58,         0,    643398,    643398,    321699,    321699,   1930195,   1930195,    965097
+PWMTorqueController_GainP_ZeroG,17,4,59,         0,      -512,      -512,      -358,      -358,      1070,      1070,       350
+Sawyer_PWMTorqueController_KFF_ZeroG,17,4,60,      1024,       -30,       -15,      -154,      -154,       205,       205,       205
+Sawyer_PWMTorqueController_OutOfRangeStiffness_mNm_per_mRad,17,4,61,         0,         0,         0,         0,         0,         0,         0,      -200
+Sawyer_PWMTorqueController_ErrorSgnFF_ZeroG,17,4,62,         0,        0 ,         0,         0,         0,   0      ,         0,      8192
+PWMTorqueController_ErrorSaturationUpper_ZeroG,17,4,63,         0,      0   ,         0,         0,         0,       200,       200,       250
+PWMTorqueController_ErrorSaturationLower_ZeroG,17,4,64,         0,       0  ,         0,         0,      0   ,      -200,      -200,      -250
+Sawyer_PositionController_DOBActionUpperLim_mRad,17,4,65,         0,   300    ,       300,       300,       300,       300,       300,       300
+Sawyer_PositionController_DOBActionLowerLim_mRad,17,4,66,         0,      -300,       -300,      -300,      -300,      -300,      -300,      -300
+Sawyer_PositionController_DOB_HuntingForgettingFactor_Q30,17,4,67,         0,1067299373,1067299373,1067299373,1067299373,    1067299373,1067299373,1067299373
+Sawyer_PositionController_DOB_GainSchedule_1,17,4,68,         0, 429496730, 429496730, 697932186, 697932186, 751619277 , 751619277, 751619277
+Sawyer_PositionController_DOB_GainSchedule_2,17,4,69,         0, 429496730, 429496730, 697932186, 697932186,  751619277 , 751619277, 751619277
+Sawyer_PositionController_DOB_GainSchedule_3,17,4,70,         0, 429496730, 429496730, 697932186, 697932186, 751619277, 751619277, 751619277
+Sawyer_PositionController_DOB_GainSchedule_4,17,4,71,         0,         0,         0,         0,         0,     0 ,         0,         0
+Sawyer_PositionController_DOB_VelSchedule_1_q10,17,4,72,         0,     102,        102,       102,       102,    102 ,       102,       102
+Sawyer_PositionController_DOB_VelSchedule_2_q10,17,4,73,         0,     205,        205,       205,       205,       205,       205,       205
+Sawyer_PositionController_DOB_VelSchedule_3_q10,17,4,74,         0,    1024,         1024,      1024,      1024,      1024,      1024,      1024
+Sawyer_PositionController_DOB_VelSchedule_4_q10,17,4,75,         0,    307200,         307200,    307200,    307200,    307200,    307200,    307200
+Sawyer_PositionController_DOB_Enable,17,2,76,         0,         1,         1,         1,         1,         1,         1,         1
+Sawyer_PositionController_TotalGearRatio_q20,17,4,77,  34952533, 329556951, 431709225, 330699899, 330699899, 216646287, 216646287, 216646287
+Sawyer_PositionController_MotorDirection,17,2,78,         1,        -1,        -1,        -1,        -1,         1,         1,         1
+Sawyer_PositionController_HomingDirFlipThreshold_mRad,17,2,79,      1000,       200,       200,       200,       200,       200,       200,       200
+PWMTorqueController_BEMFScaling_EnterPoseMode_q30,17,4,80,1073741824, 429496730, 536870912, 536870912,         , 536870912, 536870912, 322122547
+Sawyer_PositionController_DOB_FiltNumCoeff_1,17,4,81,         0,    142350,    1935,    142350,  142350 ,      2740,    142350,    142350
+Sawyer_PositionController_DOB_FiltNumCoeff_2,17,4,82,         0,    142350,     3871 ,    142350,  142350  ,      5481,    142350,    142350
+Sawyer_PositionController_DOB_FiltNumCoeff_3,17,4,83,         0,         0,      1935,        0,       0,      2740,         0,         0
+Sawyer_PositionController_DOB_FiltDenCoeff_2,17,4,84,         0,   -763877,    -241249,   -763877,   -763877,   -341595,   -763877,   -763877
+Sawyer_PositionController_DOB_FiltDenCoeff_3,17,4,85,         0,         0,   -799585,         0,         0,   -696019,         0,         0
+Sawyer_PositionController_DOB_GainSlewRate,17,4,86,         0,    536871,    536871 ,    536871,    536871,    536871,    536871,    536871
+Sawyer_PositionController_DOB_DeltaGainThresh,17,4,87,         0,1073741824,   1073741824,1073741824,1073741824,  26843545,  26843545,  26843545
+Sawyer_PositionController_HomingRefUpperLim_mRad,17,4,88,      2000,       500,     500   ,       500,       500,     500    ,       500,       500
+Sawyer_PositionController_HomingRefLowerLim_mRad,17,4,89,       -2000,      -500,     -500    ,    -500     ,      -500,       -500  ,      -500,      -500
+Sawyer_PWMTorqueController_MotorPeakCurrent_Unhomed,17,4,90,   1200 ,      3000,    6000,   4000 ,      4000,      4000,      4000,      3000
+Sawyer_PWMTorqueController_TRComp_UpperOutputLimit,17,4,91,        0 ,      2500,      2500,   2500 ,      2500,  0,         0,         0
+Sawyer_PWMTorqueController_TRComp_LowerOutputLimit,17,4,92,       0 ,     -2500,     -2500,      -2500,     -2500,      0 ,         0,         0
+Sawyer_PWMTorqueController_TREst_ProcessNoiseCovar,17,4,93,       200,       200,       200,       200,       200,       200,       200,       200
+Sawyer_PositionController_InitialHomingDirection,17,2,94,         1,         1,        -1,         1,         1,         1,         1,         1
+Sawyer_PositionController_HasBrake,17,2,95,         0,         0,        1 ,         1,         1,         0,         0,         0
+Sawyer_PWMTorqueController_RefTorqueSlewRate_msec_q10,17,4,96,     20480,     20480,     20480,     20480,     20480,     20480,     20480,     20480
+                              ,17,0,97,         ,         ,         ,         ,         ,         ,         ,        
+                              ,17,0,98,         ,         ,         ,         ,         ,         ,         ,        
+                              ,17,0,99,         ,         ,         ,         ,         ,         ,         ,        
+#registers for mode : 25 group 1 module 6 ? tu jest dziwne dzielenie rejestow
+#HesOffset0 (i 2),25,4,0,         ,         ,      2051,         ,      2110,         ,      2155,       651
+#                              ,25,0,1,         ,         ,         ,         ,         ,         ,         ,        
+#HesOffset0,25,4,2,      2043,         ,         ,         ,         ,         ,      2046,        
+#                              ,25,0,3,         ,         ,         ,         ,         ,         ,         ,        
+#                              ,25,0,4,         ,         ,         ,         ,         ,         ,         ,        
+#                              ,25,0,5,         ,         ,         ,         ,         ,         ,         ,        
+#                              ,25,0,6,         ,         ,         ,         ,         ,         ,         ,        
+#                              ,25,0,7,         ,         ,         ,         ,         ,         ,         ,        
+#HesLookupTable (i 25) ,25,2,8,         ,         ,         ,         ,         ,         ,         5,        
+#register 9                    ,25,4,9,         ,         5,         ,         ,         ,         ,         ,         5
+#                              ,25,0,10,         ,         ,         ,         ,         ,         ,         ,        
+#registers for mode : 25 group 1 module 6 ? tu jest dziwne dzielenie rejestow
+#HesOffset0 (i 2),25,4,0,  2043  ,    2000     ,      2051,         ,      2110,    2046     ,      2155,       651
+#                              ,25,0,1,         ,         ,         ,         ,         ,         ,         ,        
+#HesOffset0,25,4,2,      2043,         ,         ,         ,         ,         ,      2046,        
+#                              ,25,0,3,         ,         ,         ,         ,         ,         ,         ,        
+#                              ,25,0,4,         ,         ,         ,         ,         ,         ,         ,        
+#                              ,25,0,5,         ,         ,         ,         ,         ,         ,         ,        
+#                              ,25,0,6,         ,         ,         ,         ,         ,         ,         ,        
+#                              ,25,0,7,         ,         ,         ,         ,         ,         ,         ,        
+#HesLookupTable (i 25) ,25,2,8,         ,         ,         ,         ,         ,         ,         5,        
+#register 9                    ,25,4,9,         ,         5,         ,         ,         ,         ,         ,         5
+#                              ,25,0,10,         ,         ,         ,         ,         ,         ,         ,        
+#
+#registers for mode : 29 group 1  module 7 
+                              ,29,0,0,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,1,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,2,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,3,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,4,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,5,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,6,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,7,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,8,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,9,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,10,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,11,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,12,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,13,         ,         ,         ,         ,         ,         ,         ,        
+JointAssy2RobotOffset_mRads_q10,29,4,14,  -2216149,      -713,   -785839,     -5579,      -990,       151,     -5339,     -8717
+JointAssy2RobotInverted,29,2,15,         1,         1,         1,         1,        -1,         1,         1,         1
+JointMultiturnEnable,29,2,16,         0,         0,         0,       0 ,         0,         0,         0,         1
+JointMultiturnOffsetVer,29,2,17,         ,         ,         ,         ,         ,         ,         ,         0
+                              ,29,0,18,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,19,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,20,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,21,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,22,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,23,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,24,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,25,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,26,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,27,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,28,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,29,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,30,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,31,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,32,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,33,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,34,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,35,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,36,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,37,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,38,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,39,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,40,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,41,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,42,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,43,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,44,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,45,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,46,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,47,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,48,         ,         ,         ,         ,         ,         ,         ,        
+                              ,29,0,49,         ,         ,         ,         ,         ,         ,         ,        
+#registers for mode : 33 group 1 module 8
+MotorDirection,33,4,0,        -1,         1,         ,         1,        -1,        -1,        -1,        -1
+MotorMinPwm,33,0,1,         ,         ,         ,         ,         ,         ,         ,        
+MotorMaxPwm,33,0,2,         ,         ,         ,         ,         ,         ,         ,        
+MotorContinousCurrent,33,4,3,         ,      6100,         ,      6000,      6000,         ,      4000,      3500
+MotorPeakCurrent,33,4,4,         ,      8000,         ,      8000,      8000,         ,      8000,      8000
+MotorPeakCurrentTime,33,4,5,         ,      2000,      2000,      2000,      2000,         ,      2000,      1000
+CurrentLoopGainP,33,2,6,         ,       100,       100,       250,       250,         ,       225,       225
+CurrentLoopGainI,33,2,7,         ,        50,        50,        50,        50,         ,        50,        50
+CurrentLoopGainFF,33,2,8,         0,         0,         0,         0,         0,         ,         0,         0
+MotorNumberOfPoles,33,2,9,         6,        16,        16,        12,        12,         ,        12,        12
+#registers for mode : 37
+register 0                    ,37,2,0,         0,         0,         0,         0,         ,         ,         0,         0
+                              ,37,0,1,         ,         ,         ,         ,         ,         ,         ,        
+                              ,37,0,2,         ,         ,         ,         ,         ,         ,         ,        
+                              ,37,0,3,         ,         ,         ,         ,         ,         ,         ,        
+                              ,37,0,4,         ,         ,         ,         ,         ,         ,         ,        
+                              ,37,0,5,         ,         ,         ,         ,         ,         ,         ,        
+                              ,37,0,6,         ,         ,         ,         ,         ,         ,         ,        
+                              ,37,0,7,         ,         ,         ,         ,         ,         ,         ,        
+                              ,37,0,8,         ,         ,         ,         ,         ,         ,         ,        
+                              ,37,0,9,         ,         ,         ,         ,         ,         ,         ,        
+#registers for mode : 41
+register 0                    ,41,2,0,         0,         1,         1,         0,         ,         0,         0,         0
+                              ,41,0,1,         ,         ,         ,         ,         ,         ,         ,        
+                              ,41,0,2,         ,         ,         ,         ,         ,         ,         ,        
+                              ,41,0,3,         ,         ,         ,         ,         ,         ,         ,        
+                              ,41,0,4,         ,         ,         ,         ,         ,         ,         ,        
+                              ,41,0,5,         ,         ,         ,         ,         ,         ,         ,        
+                              ,41,0,6,         ,         ,         ,         ,         ,         ,         ,        
+                              ,41,0,7,         ,         ,         ,         ,         ,         ,         ,        
+                              ,41,0,8,         ,         ,         ,         ,         ,         ,         ,        
+                              ,41,0,9,         ,         ,         ,         ,         ,         ,         ,        
+#registers for mode : 11
+#0500110e0402130e04020c0e04020d0e0402004e040200
+register 0                    ,11,32,0,,,,,,,,
+register 1                    ,11,32,1,,,,,,,,
+register 2                    ,11,32,2,,,,,,,,
+register 3                    ,11,32,3,,,,,,,,
+register 4                    ,11,32,4,,,,,,,,
+register 5                    ,11,32,5,,,,,,,,
+register 6                    ,11,32,6,,,,,,,,
+register 7                    ,11,32,7,,,,,,,,
+                              ,11,0,8,,,,,,,,
+register 9                    ,11,32,9,,,,,,,,
+register 10                   ,11,32,10,,,,,,,,

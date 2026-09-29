@@ -1,0 +1,41 @@
+AmyCore
+Copyright (C) 2023-2026 Ola Gatner
+
+AmyCore is dual-licensed: GNU Affero General Public License v3.0 only (LICENSE), or a
+commercial license from the copyright holder (LICENSE-COMMERCIAL.md).
+
+AmyCore is an independent project. It is not affiliated with, endorsed by or supported by
+Rethink Robotics GmbH, HAHN Group or any of their predecessors or successors. "Sawyer",
+"Intera" and "Rethink Robotics" are trademarks of their respective owners and are used here
+only to describe the hardware AmyCore works with.
+
+-------------------------------------------------------------------------------------------
+Third-party material included in this source tree
+-------------------------------------------------------------------------------------------
+
+thirdparty/sawyer_robot/sawyer_description/  (10 link meshes, package.xml)
+AmyConfig/model/sawyer_intera2023.urdf       (derived from Rethink's sawyer_description URDF)
+    From https://github.com/RethinkRobotics/sawyer_robot (v5.3.0, commit d1ef3d0)
+    Copyright (c) Rethink Robotics
+    Apache License 2.0, see thirdparty/sawyer_robot/LICENSE
+
+-------------------------------------------------------------------------------------------
+Third-party software used at build or run time (not included)
+-------------------------------------------------------------------------------------------
+
+Dear ImGui (fetched by CMake)        MIT            https://github.com/ocornut/imgui
+SDL2                                 zlib           https://www.libsdl.org
+Pinocchio                            BSD-2-Clause   https://github.com/stack-of-tasks/pinocchio
+coal (formerly hpp-fcl)              BSD-3-Clause   https://github.com/coal-library/coal
+Eigen                                MPL-2.0        https://eigen.tuxfamily.org
+urdfdom, console_bridge, Boost       BSD / BSL-1.0  (Pinocchio dependencies)
+
+esp32_enable/ (firmware):
+Arduino core for ESP32               LGPL-2.1       https://github.com/espressif/arduino-esp32
+ESP-IDF                              Apache-2.0     https://github.com/espressif/esp-idf
+
+tools/, esp32_enable/scope_test.py (Python):
+meshcat-python                       MIT            https://github.com/meshcat-dev/meshcat-python
+NumPy                                BSD-3-Clause   https://numpy.org
+PyYAML                               MIT            https://pyyaml.org
+pyserial                             BSD-3-Clause   https://github.com/pyserial/pyserial

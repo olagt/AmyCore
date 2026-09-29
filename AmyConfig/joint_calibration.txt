@@ -1,0 +1,8 @@
+# Local joint calibration, written to the joints at every CONFIG on top of the factory values from each board's
+# DATABLOCK (applyDatablockCalibration in main.cpp). Lines: <joint> <key> <value>
+# keys: HesOffset0 (zero of the torque sensor in raw Hall counts), SDSCalibrationSlope, JointAssy2RobotOffset_mRads_q10
+# Firmware: torque [mNm] = (RawHes0 - HesOffset0) * SDSCalibrationSlope / 100 (checked on j5/j6 2026-09-26).
+
+# To measure a joint's zero: stream its RawHes0 (dbgpage <board> 1 ..., see docs/JRCP_PROTOCOL.md 8.1) with the joint
+# unloaded and still, and use the mean as HesOffset0. Example:
+#j6 HesOffset0 2597

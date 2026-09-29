@@ -1,0 +1,58 @@
+build/
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# build output
+build-robot/
+
+__pycache__/
+AmyConfig/aux_relay_state.txt
+
+# local runtime / tools
+run.log
+tools/amyview/venv/
+
+# local robot-specific files
+AmyConfig/datablock/*
+!AmyConfig/datablock/.gitkeep
+AmyConfig/model/sawyer_calibrated.urdf
+AmyConfig/model/gravity_offsets.txt
+AmyConfig/gravcal/
+imgui.ini
+
+# editor settings
+.vscode/
+
+# private notes before publishing (not part of the project)
+PUBLISHING_CHECKLIST.md

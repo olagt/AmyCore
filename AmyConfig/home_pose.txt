@@ -1,0 +1,21 @@
+# Home posture for "Go to home" (Joint detail) and `tools/amyctl homepose <joint|all>`.
+# One line per joint: <joint> <degrees>. AmyCore reads this file every time it is used, so edits apply at once.
+# "homepose all" / "5. Go to home posture" are DISABLED (2026-09-26): moving the joints one after the other in a fixed
+# order can drive the arm into the table, the pedestal or itself. Use "Go to home" per joint (Joint detail).
+#
+# Values: Intera's "neutral" pose (param_dump.yaml /named_poses/right/poses/neutral and head/neutral, radians
+# 0, -1.18, 0, 2.18, 0, 0.57, 3.3161; head 0). The 2023 captures show no fixed resting posture: after boot the
+# arm stayed wherever it had been left (three boots: j0 -127 / -5 / -162 deg, j3 101 / 154 / 108 deg).
+#
+# Alternatives (degrees):
+#   Intera "shipping" : head_pan -179.9  j0 0  j1 -90.0  j2 0  j3 159.9  j4 0  j5 -159.9  j6 190.0
+#   2023 boot, 290 s  : head_pan 0.2  j0 -127.2  j1 -30.7  j2 15.9  j3 101.2  j4 -39.0  j5 -24.3  j6 107.8
+
+j6        190.0
+j5         32.7
+j4          0.0
+j3        124.9
+j2          0.0
+j1        -67.6
+j0          0.0
+head_pan    0.0

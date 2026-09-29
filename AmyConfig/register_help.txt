@@ -1,0 +1,79 @@
+# Help texts for the CONFIG registers, shown by AmyCore's "Config registers" window (name | text).
+# None of our files document these variables. The texts are inferred from the names, Intera's values
+# (sawyer_mp4_data.yaml) and what we observed on the robot; treat them as notes, not documentation.
+# Unit hints in names: _q10/_q20/_q28/_q30 = fixed point (value / 2^10 ...), mRad = milliradian, mNm = milli-newton-metre.
+# Names not listed here get a generic text from their prefix (see regHelpText in main.cpp).
+
+GlobalErrorOverrideMask | Board-level mask: global error bits set here are ignored (not reported / not latched).
+JointErrorOverrideMask | Joint error bits set here are ignored. Intera: head_pan 1288, all others 0. AmyCore's "mask" command writes this.
+JointMeasurementSource | Which sensor gives the joint position (board-level). Intera leaves it at the model default.
+DisableFaultFlagMonitor | 1 = the board stops monitoring its fault inputs. Keep 0.
+HesLookupTable | Which lookup table the HES (Hall-effect joint angle sensor) uses; depends on the joint's sensor/magnet type.
+HesOffset0 | Calibration of the HES joint angle sensor (zero offset). Board-specific: comes from the board's DATABLOCK.
+SDSCalibrationSlope | Calibration slope of the series-elastic deflection sensor (torque sensing). Board-specific: DATABLOCK; Intera used 651 when the DATABLOCK has none.
+JointAssy2RobotOffset_mRads_q10 | Offset from the joint assembly's zero to the robot's joint zero, in mrad * 1024. Board-specific: DATABLOCK. An unhomed joint reports -offset.
+JointAssy2RobotInverted | 1 = the joint's angle is inverted between assembly and robot frame.
+JointMultiturnEnable | 1 = multi-turn tracking of the absolute sensor (only j6 by default). j6 got MAE_SENSOR_ERROR after homing across the wrap point with 1; AmyCore sets j6 to 0 by default (AMY_J6_MULTITURN=1 keeps 1).
+JointMultiturnOffsetVer | Version/format of the stored multi-turn offset (j6 only).
+MotorDirection | Motor current direction (+1/-1) relative to the joint. Wrong sign = the motor pushes the wrong way.
+MotorContinousCurrent | Continuous motor current limit, mA.
+MotorPeakCurrent | Peak motor current limit, mA.
+MotorPeakCurrentTime | How long the peak current may flow, ms.
+MotorNumberOfPoles | Number of motor poles (commutation). Must match the motor: 16 on j0/j1, 12 on j2-j6, 6 on head_pan.
+MotorThermistorTable | Which thermistor curve the motor temperature sensor uses (1 on j0/j1, 0 elsewhere).
+CurrentLoopGainP | Proportional gain of the motor current loop.
+CurrentLoopGainI | Integral gain of the motor current loop.
+CurrentLoopGainFF | Feed-forward gain of the motor current loop (0 on every joint).
+Sawyer_PWM_Torque_Control_Flag | 1 = torque control through the PWM torque controller (1 on every joint).
+Sawyer_TorqueConfig_CurrentBasedFlag | 1 = torque computed from motor current instead of the elastic deflection sensor (head_pan only).
+Sawyer_TorqueConfig_TorqueConstant_NmPerAmp_Q10 | Motor torque constant, Nm/A * 1024.
+Sawyer_MotorHallTicksPerOutputmRad_q28 | Motor Hall-sensor ticks per mrad of joint output (gear ratio), * 2^28. The sign follows the motor direction.
+Sawyer_SnsConsChecker_MotorHallTicksPerOutputmRad_q28 | Same ratio as used by the sensor consistency checker (compares motor Halls, HES and deflection).
+Sawyer_SnsConsChecker_KinConstThresh_mRad | Sensor consistency checker: allowed disagreement between the position sensors, mrad.
+Sawyer_SnsConsChecker_FlexureStiffness_NmPerRad | Stiffness of the series-elastic flexure used by the consistency checker, Nm/rad.
+Sawyer_PositionController_HasBrake | 1 = the joint has a brake that must be released (unlocked) before moving.
+Sawyer_PositionController_MotorDirection | Direction sign used by the position controller.
+Sawyer_PositionController_Joint2RobotAssyDirection | Direction sign between joint assembly and robot frame, for the position controller.
+Sawyer_PositionController_TotalGearRatio_q20 | Total gear ratio motor to joint, * 2^20.
+Sawyer_PositionController_HomingSpeed_mRadPerSec | Speed of the homing motion, mrad/s.
+Sawyer_PositionController_InitialHomingDirection | Direction the joint first moves when homing (+1/-1).
+Sawyer_PositionController_HomingDirFlipThreshold_mRad | Homing reverses its direction after moving this far without finding the reference, mrad.
+Sawyer_PositionController_HomingRefLowerLim_mRad | Lower end of the window where the homing reference is expected, mrad.
+Sawyer_PositionController_HomingRefUpperLim_mRad | Upper end of the window where the homing reference is expected, mrad.
+Sawyer_PositionController_HeadDisable_CurrentLimit | Current limit while the head is disabled (head_pan only), mA.
+Sawyer_PositionController_DOB_Enable | 1 = disturbance observer (DOB) in the position controller is on.
+Sawyer_PositionController_DOBActionLowerLim_mRad | Lower limit of the disturbance observer's correction, mrad.
+Sawyer_PositionController_DOBActionUpperLim_mRad | Upper limit of the disturbance observer's correction, mrad.
+Sawyer_JointPositionController_isHead | 1 = head pan joint (different position controller behaviour).
+Sawyer_JointPositionController_GainP | Joint position controller: proportional gain.
+Sawyer_JointPositionController_GainI | Joint position controller: integral gain.
+Sawyer_JointPositionController_GainD | Joint position controller: derivative gain.
+Sawyer_JointPositionController_GainDHalls | Joint position controller: derivative gain on the motor Hall velocity.
+Sawyer_JointPositionController_GainN | Joint position controller: derivative filter coefficient.
+Sawyer_JointPositionController_ErrorDeadBand | Joint position controller: position errors smaller than this are ignored.
+Sawyer_JointPositionController_LowerInputLimit | Joint position controller: lowest position command accepted (joint limit).
+Sawyer_JointPositionController_UpperInputLimit | Joint position controller: highest position command accepted (joint limit).
+Sawyer_JointPositionController_LowerOutputLimit | Joint position controller: lowest output (torque request).
+Sawyer_JointPositionController_UpperOutputLimit | Joint position controller: highest output (torque request).
+Sawyer_JointTorqueController_FaultLimit_mNm | Joint torque controller: torque error that raises a fault, mNm.
+Sawyer_JointTorqueController_InputLimit | Joint torque controller: largest torque command accepted.
+Sawyer_JointTorqueController_LowerOutputLimit | Joint torque controller: lowest output.
+Sawyer_JointTorqueController_UpperOutputLimit | Joint torque controller: highest output.
+Sawyer_PWMTorqueController_MotorPoles | Motor poles as used by the PWM torque controller; should equal MotorNumberOfPoles.
+Sawyer_PWMTorqueController_MotorConstant | Motor constant used by the PWM torque controller (sign follows the motor direction).
+Sawyer_PWMTorqueController_MotorResistance | Motor winding resistance used by the current predictor (fixed point).
+Sawyer_PWMTorqueController_MotorInductance | Motor winding inductance used by the current predictor (fixed point).
+Sawyer_PWMTorqueController_MotorPeakCurrent_Homed | Peak motor current allowed once the joint is homed, mA.
+Sawyer_PWMTorqueController_MotorPeakCurrent_Unhomed | Peak motor current allowed before the joint is homed, mA (lower, for safety).
+Sawyer_PWMTorqueController_EnableCurrentLimiting | 1 = the PWM torque controller limits the motor current.
+Sawyer_PWMTorqueController_CurrentPredGain_q30 | Gain of the motor current predictor, * 2^30.
+Sawyer_PWMTorqueController_FaultLimit_mNm | PWM torque controller: torque error that raises a fault, mNm.
+Sawyer_PWMTorqueController_InputLimit_mNm | PWM torque controller: largest torque command accepted, mNm.
+Sawyer_PWMTorqueController_LowerOutputLimit | PWM torque controller: lowest PWM output.
+Sawyer_PWMTorqueController_UpperOutputLimit | PWM torque controller: highest PWM output.
+Sawyer_PWMTorqueController_ErrorDeadband_mNm | PWM torque controller: torque errors smaller than this are ignored, mNm.
+Sawyer_PWMTorqueController_BEMF_FF | Back-EMF feed-forward gain (compensates the motor's speed voltage).
+Sawyer_PWMTorqueController_KFF | Torque feed-forward gain.
+Sawyer_PWMTorqueController_InnerGearRatio | Gear ratio between motor and the elastic element.
+Sawyer_PWMTorqueController_OutOfRangeStiffness_mNm_per_mRad | Virtual spring pushing the joint back when it is beyond its range, mNm/mrad.
+Sawyer_PWMTorqueController_RefTorqueSlewRate_msec_q10 | How fast the torque reference may change (slew rate), ms * 1024.

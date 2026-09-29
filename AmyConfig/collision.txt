@@ -1,0 +1,31 @@
+# Coordinated moves: "Go to home posture", "Go to" and "Go to home" (Joint detail), `tools/amyctl homepose|goto`.
+# Before a move AmyCore checks the whole straight joint-space path for collisions (link meshes of the official
+# sawyer_description package, every link pair except neighbours, plus the table plane) and refuses if any step collides.
+# Read at AmyCore start (restart after editing).
+
+margin_m      0.02    # minimum distance between links, and between a link and the table [m]
+# pairs built to pass close to each other get their own margin: pair_margin_m <link> <link> <m>
+# (smallest gaps in Intera's valid poses and a full head sweep: head - right_l1 11.5 mm, all others >= 26.7 mm)
+pair_margin_m head right_l1 0.005   # the head swings over the shoulder with an 11.5 mm gap
+# ignore_joints head_pan # joints left out of coordinated moves: not moved, not required to be enabled/homed, and for
+                         # head_pan its links (head, screen) are not collision-checked. Only for a joint that doesn't work.
+table_z_m    -0.10    # table / floor plane in the arm base frame [m]: z up, 0 = the arm's mounting point;
+                      # "none" = no table. Measure your table: height of the table top minus height of the arm mount.
+speed_deg_s   5       # speed of the joint with the longest way (the others arrive at the same time, slower)
+accel_s       1.5     # time to reach that speed, and to brake at the end
+max_lag_deg   2       # abort (all joints hold where they are) if a joint falls this far behind its moving target
+step_deg      0.5     # path check resolution: a check every step_deg of the joint with the longest way
+
+# ---- obstacles around the robot (arm base frame, metres: x forward, y left, z up, 0 = arm mount; centre of the shape)
+#   obstacle <name> box      <x> <y> <z> <size_x> <size_y> <size_z>
+#   obstacle <name> cylinder <x> <y> <z> <radius> <length>       (vertical axis)
+#   obstacle <name> sphere   <x> <y> <z> <radius>
+# AmyView draws them (orange) and re-reads this file every 2 s: adjust until they cover the real objects, then restart
+# AmyCore (it reads this file at start). Make them a little bigger than the real object.
+# Example (remove the '#' and measure your own):
+#obstacle lamp cylinder 0.30 -0.40 0.20 0.10 0.80
+
+# ---- contact detection during moves and Cartesian jog: stop when a joint's torque (measured minus gravity model)
+# changes by more than this from the start of the motion [Nm], for 20 ms. j0 j1 j2 j3 j4 j5 j6 (0 = off).
+# At rest the difference is ~1.2 Nm at most on a well-calibrated arm.
+contact_nm    4 5 4 4 2.5 2 2
